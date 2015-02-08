@@ -59,6 +59,7 @@ public class RefereeInfoExtract {
                     if (referee != null) {
                         referees.add(referee);
                     }
+                    referee = null;
                     break;
                 } else {
                     if (lineText.length() > 10) {

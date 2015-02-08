@@ -47,7 +47,7 @@ public class AchievementsInfoExtractTest {
         AchievementsInfoExtract achievementsInfoExtract = new AchievementsInfoExtract(paths);
         achievementsInfoExtract.extractAchievementInformation(lines,headingLines,allHeadings,linesCopy,achievements);
 
-        Assert.assertEquals(2,achievements.size());
+        org.junit.Assert.assertEquals(2,achievements.size());
     }
 
     public static void main(String[] args){
