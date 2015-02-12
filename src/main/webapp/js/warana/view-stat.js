@@ -72,8 +72,8 @@ WARANA.module.viewStat = function () {
                         dataTableRow.push('<div class="progress progress-striped active "><div class="progress-bar progress-bar-1 progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: '+score_val+'%;"><div id="pbar-val">'+score_val+'%</div></div></div>');
                     }
 
+//                    dataTableRow.push(row.score);
                     dataTableRow.push('<button type="button" class="btn btn-success btn-sm view-prof btn-center"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> View</button>');
-                    dataTableRow.push('<button type="button" class="btn btn-primary btn-sm send-email btn-center"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Email</button>');
 
                     userList.push(dataTableRow);
                 }
@@ -91,7 +91,6 @@ WARANA.module.viewStat = function () {
                     { "title": "Name"  },
                     { "title": "Email" },
                     { "title": "Score" },
-                    { "title": ""},
                     { "title": ""}
                 ],
                 "columnDefs": [
@@ -149,7 +148,6 @@ WARANA.module.viewStat = function () {
                     dataTableRow.push(row.id);
                     dataTableRow.push(row.name);
                     dataTableRow.push(row.email);
-
                     var score_val = row.score;
 
                     if(score_val >= 0 && score_val <= 33){
@@ -163,7 +161,6 @@ WARANA.module.viewStat = function () {
                     }
 
                     dataTableRow.push('<button type="button" class="btn btn-success btn-sm view-prof btn-center"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> View</button>');
-                    dataTableRow.push('<button type="button" class="btn btn-primary btn-sm send-email btn-center"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Email</button>');
 
                     userList.push(dataTableRow);
                 }
@@ -181,7 +178,6 @@ WARANA.module.viewStat = function () {
                     { "title": "Name"  },
                     { "title": "Email" },
                     { "title": "Score" },
-                    { "title": ""},
                     { "title": ""}
 
                 ],
