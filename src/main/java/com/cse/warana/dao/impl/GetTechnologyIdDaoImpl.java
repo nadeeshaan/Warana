@@ -43,7 +43,6 @@ public class GetTechnologyIdDaoImpl extends BaseJDBCDaoImpl implements GetTechno
             public String mapRow(ResultSet resultSet, int i) throws SQLException {
                 String id = "";
                 id = resultSet.getString("id");
-                System.out.println(id + "//////////////////////////////////////////////////////////////");
                 return id;
             }
         };

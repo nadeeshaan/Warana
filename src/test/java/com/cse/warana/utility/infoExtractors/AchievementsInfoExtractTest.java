@@ -1,12 +1,10 @@
-package com.cse.warana.test.utility.infoExtractors;
+package com.cse.warana.utility.infoExtractors;
 
-import com.cse.warana.utility.infoExtractors.AchievementsInfoExtract;
-import com.cse.warana.utility.infoHolders.Achievement;
-import org.junit.Assert;
-import org.junit.Test;
+        import com.cse.warana.utility.infoHolders.Achievement;
+        import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.HashMap;
+        import java.util.ArrayList;
+        import java.util.HashMap;
 
 /**
  * Created by Nadeeshaan on 1/3/2015.
@@ -21,8 +19,8 @@ public class AchievementsInfoExtractTest {
     private ArrayList<Achievement> achievements = new ArrayList<>();
 
     public AchievementsInfoExtractTest(){
-        paths.put("root", "");
-        paths.put("listPath", "/gazeteerLists");
+        paths.put("root","src/main/resources");
+        paths.put("listPath","/gazeteerLists");
 
         lines.add("Awards and achievements");
         lines.add("IEEE programming Competition 2012");
@@ -39,6 +37,7 @@ public class AchievementsInfoExtractTest {
         allHeadings.add("0");
         allHeadings.add("3");
 
+
     }
 
     @Test
@@ -46,7 +45,7 @@ public class AchievementsInfoExtractTest {
         AchievementsInfoExtract achievementsInfoExtract = new AchievementsInfoExtract(paths);
         achievementsInfoExtract.extractAchievementInformation(lines,headingLines,allHeadings,linesCopy,achievements);
 
-        Assert.assertEquals(2,achievements.size());
+        org.junit.Assert.assertEquals(2,achievements.size());
     }
 
     public static void main(String[] args){
@@ -54,3 +53,4 @@ public class AchievementsInfoExtractTest {
         achievementsInfoExtractTest.extractAchievementInformationTest();
     }
 }
+
